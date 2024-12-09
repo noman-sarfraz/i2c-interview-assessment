@@ -1,38 +1,504 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-image: url("./../public/background.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #ebf0ff;
+}
+
+.app-container {
+  padding: 50px 100px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.nav-item {
+  margin: 0px 16px;
+  color: #515151;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: #1434cb;
+}
+
+.nav-item.active {
+  color: #fff;
+  padding: 16px 32px;
+  margin-left: 16px;
+  border-radius: 40px;
+  background-color: #1434cb;
+  box-shadow: 0px 10px 40px rgba(20, 52, 203, 0.5);
+}
+
+.feedbacks-section-container {
+  display: flex;
+  align-items: center;
+  margin: 100px 0px 100px 0px;
+}
+
+.feedbacks-section-container .feedbacks-section {
+  width: 50%;
+}
+
+.feedbacks-section-container .investment-icon {
+  width: 50%;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58.09px;
+  margin: 0px 0px 64px 0px;
+}
+
+.highlighted-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1434cb;
+}
+
+/* FEEDBACKS */
+
+.customer-feedback-card {
+  padding: 24px;
+  gap: 24px;
+  border-radius: 10px;
+  display: flex;
+  background-color: #f6fbf8;
+  margin-bottom: 16px;
+}
+
+.customer-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.customer-name {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.customer-feedback {
+  font-weight: 500;
+  color: #515151;
+}
+
+.blank-feedback-card {
+  height: 72px;
+  background: linear-gradient(
+    180deg,
+    #f6fbf8 0%,
+    #f6fbf8 0.01%,
+    rgba(246, 251, 248, 0) 100%
+  );
+  border-radius: 10px;
+}
+
+/* PROS */
+
+/* use CHATGPT and find suitable names for everywhere */
+.info-cards-container {
+  display: flex;
+  border-radius: 10px;
+  background-color: #f6fbf8;
+}
+
+.info-card {
+  display: flex;
+  padding: 48px 24px;
+  gap: 24px;
+}
+
+.info-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+.info-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1434cb;
+}
+
+.info-description {
+  font-weight: 500;
+  color: #515151;
+}
+
+/* REGISTRATION */
+.registration-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.registeration-icon {
+  width: 45%;
+}
+
+.form-container {
+  width: 45%;
+}
+
+.registration-form {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 34px 44px 20px #b9ceea40;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+}
+
+.registration-heading {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43px;
+  color: #000;
+  margin: 0px 0px 16px 0px;
+}
+
+.registration-heading.success {
+  color: #057d21;
+}
+
+.success-message {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #515151;
+}
+
+.success-message .user-name {
+  font-weight: 700;
+}
+
+.registration-details {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #515151;
+  margin-bottom: 28px;
+}
+
+.text-input {
+  padding: 16px;
+  background-color: #f9faff;
+  border: 1px solid #dee6ff;
+  /* TODO: style placeholder */
+  /* TODO: style focus border */
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.input-label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #000;
+}
+
+.text-input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.red-asterisk {
+  color: #eb5939;
+  font-weight: 500;
+}
+
+.submit-button {
+  padding: 16px 0px;
+  border-radius: 40px;
+  background-color: #1434cb;
+  color: #fff;
+  font-weight: 700;
   text-align: center;
+  border: 1px solid #1434cb;
+  width: 100%;
+  margin: 40px 0px 20px 0px;
+  box-shadow: 0px 10px 34px 0px #1434cb80;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.error-message {
+  font-size: 11px;
+  color: #eb5939;
+  font-weight: 500;
+  margin: 8px 0px 0px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* FOOTER */
+.page-footer {
+  padding: 30px 0px 0px;
+  border-top: 1px solid #cbcbcb;
+  margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.copyright-text {
+  display: flex;
+  justify-content: end;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #515151;
+  margin-top: 30px;
+}
+
+/* Utility classes */
+.flex-1 {
+  flex: 1;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.mb-100p {
+  margin-bottom: 100px;
+}
+
+/* Slider */
+.trusted-slider {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.slider-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 43px;
+  margin: 0px 0px 16px 0px;
+}
+
+.slider-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #515151;
+  line-height: 19px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.slides-wrapper {
+  position: relative;
+  width: 100%; /* Adjust this width to fit your design */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(100% * 3 / 3); /* 3 total slides */
+}
+
+.slide {
+  flex: 0 0 calc(100% / 3); /* 1/3rd of the visible area per slide */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.slide svg {
+  max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #f97c00;
+  cursor: pointer;
+}
+
+.slider-button {
+  cursor: pointer;
+}
+
+.slider-button.disabled {
+  cursor: not-allowed;
+}
+
+.slider-button.disabled svg path {
+  stroke: #ccc;
+}
+
+@media only screen and (max-width: 991px) {
+  .app-container {
+    padding: 50px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .feedbacks-section-container {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .feedbacks-section-container .feedbacks-section {
+    width: 80%;
+  }
+
+  .feedbacks-section-container .investment-icon {
+    width: 80%;
+  }
+
+  .info-cards-container {
+    flex-direction: column;
+  }
+
+  .registration-section {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .registeration-icon {
+    width: 80%;
+  }
+
+  .form-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-items {
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    right: 5px;
+    left: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    background-color: white;
+    padding: 40px 20px;
+    gap: 10px;
+    border-radius: 10px;
+
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(-20px); /* Start slightly above */
+    visibility: hidden; /* Hide visually but keep layout intact */
+    transition: opacity 0.3s ease, transform 0.3s ease,
+      visibility 0s linear 0.3s;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    gap: 5px;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+  }
+
+  .nav-item.active {
+    box-shadow: none;
+    padding: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .show-menu {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset the slide */
+    visibility: visible; /* Make visible */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s; /* Reset timing for visibility */
+  }
+
+  .slide {
+    flex: 0 0 calc(100%);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .app-container {
+    padding: 50px 20px;
+  }
+
+  /* .feedbacks-section-container {
+    flex-direction: column;
+  } */
+
+  .feedbacks-section-container .feedbacks-section {
+    width: 100%;
+  }
+
+  .feedbacks-section-container .investment-icon {
+    width: 100%;
+  }
+
+  /* .info-cards-container {
+    flex-direction: column;
+  } */
+
+  /* .registration-section {
+    flex-direction: column;
+    gap: 28px;
+  } */
+
+  .registeration-icon {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 38px;
   }
 }

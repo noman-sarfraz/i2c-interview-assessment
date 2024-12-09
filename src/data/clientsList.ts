@@ -1,0 +1,36 @@
+import ColaSvg from "../resources/images/cola.svg";
+import MicrosoftSvg from "../resources/images/microsoft.svg";
+import TwitterSvg from "../resources/images/twitter.svg";
+
+export const clientsList = [
+  { id: 1, image: MicrosoftSvg },
+  { id: 2, image: TwitterSvg },
+  { id: 3, image: ColaSvg },
+  { id: 4, image: MicrosoftSvg },
+  { id: 5, image: TwitterSvg },
+  { id: 6, image: ColaSvg },
+  { id: 7, image: MicrosoftSvg },
+  { id: 8, image: TwitterSvg },
+  { id: 9, image: ColaSvg },
+  { id: 10, image: MicrosoftSvg },
+  { id: 11, image: TwitterSvg },
+  { id: 12, image: ColaSvg },
+  { id: 13, image: MicrosoftSvg },
+  { id: 14, image: TwitterSvg },
+  { id: 15, image: ColaSvg },
+  { id: 16, image: MicrosoftSvg },
+  { id: 17, image: TwitterSvg },
+  { id: 18, image: ColaSvg },
+  { id: 19, image: MicrosoftSvg },
+  { id: 20, image: TwitterSvg },
+  { id: 21, image: ColaSvg },
+  { id: 22, image: MicrosoftSvg },
+  { id: 23, image: TwitterSvg },
+  { id: 24, image: ColaSvg },
+  { id: 25, image: MicrosoftSvg },
+  { id: 26, image: TwitterSvg },
+  { id: 27, image: ColaSvg },
+  { id: 28, image: MicrosoftSvg },
+  { id: 29, image: TwitterSvg },
+  { id: 30, image: ColaSvg },
+];
