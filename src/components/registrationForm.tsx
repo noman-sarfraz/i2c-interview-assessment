@@ -81,7 +81,7 @@ const RegistrationForm = () => {
       return <></>;
     }
 
-    return <p className="error-message">{errors[field]}</p>;
+    return <p id={`${field}_error`} role="alert" className="error-message">{errors[field]}</p>;
   };
 
   // ==========
@@ -110,35 +110,43 @@ const RegistrationForm = () => {
 
       <div className="text-input-fields">
         <div>
-          <p className="input-label">
+          <label htmlFor="name_field" className="input-label">
             Name <span className="red-asterisk">*</span>
-          </p>
+          </label>
           <input
+            id="name_field"
             type="text"
             className="text-input"
             placeholder="Enter your name"
             onChange={handleNameChange}
+            aria-invalid={!!errors["name"]}
+            aria-describedby="name_error"
           />
           {renderErrorMessage("name")}
         </div>
         <div>
-          <p className="input-label">Company</p>
+          <label htmlFor="company_field" className="input-label">Company</label>
           <input
+            id="company_field"
             type="text"
             className="text-input"
             placeholder="Enter your company name"
             onChange={handleCompanyChange}
+            aria-invalid={false}
           />
         </div>
         <div>
-          <p className="input-label">
+          <label htmlFor="email_field" className="input-label">
             Email Address <span className="red-asterisk">*</span>
-          </p>
+          </label>
           <input
+            id="email_field"
             type="text"
             className="text-input"
             placeholder="Enter your email address"
             onChange={handleEmailChange}
+            aria-invalid={!!errors["email"]}
+            aria-describedby="email_error"
           />
           {renderErrorMessage("email")}
         </div>

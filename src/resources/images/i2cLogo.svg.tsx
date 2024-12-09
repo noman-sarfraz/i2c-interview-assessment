@@ -6,6 +6,8 @@ const I2cLogo = () => {
       viewBox="0 0 79 49"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="I2c company Logo"
     >
       <path
         fill-rule="evenodd"

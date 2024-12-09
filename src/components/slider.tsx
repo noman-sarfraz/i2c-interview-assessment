@@ -66,6 +66,7 @@ const Slider = () => {
             "disabled"
           )}`}
           onClick={handlePrev}
+          aria-label="Move back in the slideshow"
         >
           <ChevronLeft />
         </div>
@@ -87,11 +88,13 @@ const Slider = () => {
         </div>
 
         <div
+          role="button"
           className={`slider-button ${addClassIf(
             currentIndex + imagesPerFrame >= clientsList.length,
             "disabled"
           )}`}
           onClick={handleNext}
+          aria-label="Move forth in the slideshow"
         >
           <ChevronRight />
         </div>

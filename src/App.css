@@ -222,6 +222,7 @@ body {
   font-weight: 500;
   border-radius: 5px;
   width: 90%;
+  margin: 8px 0px 0px 0px;
 }
 
 .input-label {
@@ -233,7 +234,7 @@ body {
 .text-input-fields {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
 }
 
 .red-asterisk {
