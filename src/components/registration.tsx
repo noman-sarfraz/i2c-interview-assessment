@@ -7,7 +7,7 @@ const Registration = () => {
   // ==========
 
   return (
-    <div className="registration-section mb-100p">
+    <div className="registration-section mb-100">
       <div className="registeration-icon">
         <RegistrationSvg />
       </div>

@@ -50,7 +50,7 @@ const Slider = () => {
   // ==========
 
   return (
-    <div className="trusted-slider mb-100p">
+    <div className="trusted-slider mb-100">
       <h2 className="slider-title">
         <span>Trusted by</span>
         <RadialLine_v2 />

@@ -84,7 +84,6 @@ body {
 }
 
 /* FEEDBACKS */
-
 .customer-feedback-card {
   padding: 24px;
   gap: 24px;
@@ -123,9 +122,7 @@ body {
   border-radius: 10px;
 }
 
-/* PROS */
-
-/* use CHATGPT and find suitable names for everywhere */
+/* INFO CARDS */
 .info-cards-container {
   display: flex;
   border-radius: 10px;
@@ -216,8 +213,6 @@ body {
   padding: 16px;
   background-color: #f9faff;
   border: 1px solid #dee6ff;
-  /* TODO: style placeholder */
-  /* TODO: style focus border */
   font-size: 16px;
   font-weight: 500;
   border-radius: 5px;
@@ -293,11 +288,7 @@ body {
   align-items: center;
 }
 
-.w-50 {
-  width: 50%;
-}
-
-.mb-100p {
+.mb-100 {
   margin-bottom: 100px;
 }
 
@@ -378,6 +369,9 @@ body {
   stroke: #ccc;
 }
 
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* FOR SMALL SCREENS UPTO MD SCREENS */
 @media only screen and (max-width: 991px) {
   .app-container {
     padding: 50px;
@@ -414,6 +408,7 @@ body {
   }
 }
 
+/* FOR SMALL SCREENS UPTO SM SCREENS */
 @media only screen and (max-width: 767px) {
   .nav-items {
     flex-direction: column;
@@ -465,14 +460,11 @@ body {
   }
 }
 
+/* FOR SMALL SCREENS UPTO XS SCREENS */
 @media only screen and (max-width: 575px) {
   .app-container {
     padding: 50px 20px;
   }
-
-  /* .feedbacks-section-container {
-    flex-direction: column;
-  } */
 
   .feedbacks-section-container .feedbacks-section {
     width: 100%;
@@ -481,15 +473,6 @@ body {
   .feedbacks-section-container .investment-icon {
     width: 100%;
   }
-
-  /* .info-cards-container {
-    flex-direction: column;
-  } */
-
-  /* .registration-section {
-    flex-direction: column;
-    gap: 28px;
-  } */
 
   .registeration-icon {
     width: 100%;

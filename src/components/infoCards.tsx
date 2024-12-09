@@ -7,7 +7,7 @@ const InfoCards = () => {
   // ==========
 
   return (
-    <div className="info-cards-container mb-100p">
+    <div className="info-cards-container mb-100">
       {infoCardsData.map(({ id, title, descriptionText, imageSrc }) => (
         <div className="info-card" key={id}>
           <div className="d-flex align-items-center">
